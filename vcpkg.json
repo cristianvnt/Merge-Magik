@@ -1,0 +1,9 @@
+{
+  "name": "mergemagik",
+  "version": "1.0.0",
+  "description": "very important game",
+  "dependencies": [
+    "raylib",
+    "fmt"
+  ]
+}
