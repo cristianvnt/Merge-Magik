@@ -1,4 +1,6 @@
 #include "raylib.h"
+#include "rlgl.h"
+#include "raymath.h"
 #include <fmt/base.h>
 
 #include "Common.h"
@@ -18,11 +20,13 @@ int main()
 		if (IsKeyPressed(KEY_LEFT_ALT))
 			IsCursorHidden() ? ShowCursor() : HideCursor();
 
+		// DRAW
 		BeginDrawing();
 		ClearBackground(RAYWHITE);
 
-		if (IsMouseButtonDown(MOUSE_BUTTON_LEFT))
-			fmt::print("pressed\n");
+		rlTranslatef(GetScreenWidth() / 2, GetScreenHeight(), 0);
+		rlRotatef(90, 1, 0, 0);
+		DrawGrid(10, 50);
 
 		EndDrawing();
 	}
